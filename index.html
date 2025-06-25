@@ -4,92 +4,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scelik Bauunternehmen</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>SCelik Reinigungsservice</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --black: #111111;
+      --gold: #facc15;
+      --light-gold: #fde68a;
+      --text: #f4f4f4;
+      --bg: #1a1a1a;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--black);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: var(--bg);
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.8);
+    }
+
+    .btn-gold {
+      background-color: var(--gold);
+      color: var(--black);
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--light-gold);
+      color: var(--black);
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: #222;
+      color: var(--text);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(250, 204, 21, 0.5);
+    }
+
+    footer {
+      background-color: var(--bg);
+      color: var(--light-gold);
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div class="container header-container">
-      <img src="https://via.placeholder.com/120x120?text=Scelik" alt="Scelik Logo" class="logo" />
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#über-uns">Über Uns</a></li>
-          <li><a href="#dienstleistungen">Dienstleistungen</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo.jpg" alt="SCelik Logo">
+        <span>S Çelik</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#ueber-uns">Über Uns</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dienstleistungen">Dienstleistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
         </ul>
-      </nav>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div data-aos="fade-up">
+      <h1 class="mb-4">Professionelle Reinigung mit Stil</h1>
+      <a href="#kontakt" class="btn btn-gold btn-lg">Jetzt kontaktieren</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-text">
-      <h1 class="fade-in">Scelik Bauunternehmen</h1>
-      <p class="fade-in delay-1">Gegründet 2025 — Stabile Grundlagen, sichere Zukunft</p>
-      <a href="#kontakt" class="btn-primary fade-in delay-2">Kontaktieren Sie uns</a>
+  <section id="ueber-uns" class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="img/logo.jpg" alt="SCelik Logo" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <p class="fs-5">
+          SCelik Reinigungsservice wurde 2025 in Wien gegründet. Wir bieten maßgeschneiderte Reinigungsdienste für Wohnungen,
+          Firmen und öffentliche Einrichtungen an. Unsere Expertise umfasst Schneeräumung, Gebäudereinigung und
+          Haushaltsauflösungen mit höchster Professionalität.
+        </p>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section id="über-uns" class="container section">
-      <h2>Über Uns</h2>
-      <div class="about-content">
-        <img
-          src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
-          alt="Bauplatz Foto"
-          class="about-img fade-in" />
-        <p class="fade-in delay-1">
-          Scelik Bauunternehmen ist ein junges, dynamisches Unternehmen, spezialisiert auf Bauprojekte
-          im Wohn-, Gewerbe- und Infrastrukturbereich in Österreich.
-          Seit 2025 setzen wir auf Qualität, Zuverlässigkeit und moderne Bauweise.
-        </p>
+  <section id="dienstleistungen" class="bg-dark" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center">Unsere Dienstleistungen</h2>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="https://st.depositphotos.com/1015060/4317/i/450/depositphotos_43173541-stock-photo-man-using-snowblower.jpg" class="card-img-top" alt="Schneeräumung">
+            <div class="card-body">
+              <h5 class="card-title">Schneeräumung</h5>
+              <p class="card-text">Zuverlässige Schneebeseitigung für Parkplätze, Gehwege und Zufahrten.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+          <div class="card h-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRBakWIEx7MdN1zvCBiudhFAq1B8kMRoW02o4cvJWQuZkpUTLjAxcbInTv9DN2Q-DvDj4&usqp=CAU" class="card-img-top" alt="Gebäudereinigung">
+            <div class="card-body">
+              <h5 class="card-title">Gebäudereinigung</h5>
+              <p class="card-text">Professionelle Reinigung für Gebäude, Büros und Wohnanlagen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card h-100">
+            <img src="https://st2.depositphotos.com/1177973/11702/i/950/depositphotos_117028734-stock-photo-male-workers-carrying-furniture.jpg" class="card-img-top" alt="Haushaltsauflösung">
+            <div class="card-body">
+              <h5 class="card-title">Haushaltsauflösung</h5>
+              <p class="card-text">Komplette Haushaltsauflösungen mit Entrümpelung und Endreinigung.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="dienstleistungen" class="container section">
-      <h2>Unsere Dienstleistungen</h2>
-      <div class="services-grid">
-        <article class="service-card fade-in">
-          <img
-            src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80"
-            alt="Wohnprojekte" />
-          <h3>Wohnprojekte</h3>
-          <p>Moderne, sichere und nachhaltige Wohnräume für jede Lebensphase.</p>
-        </article>
-
-        <article class="service-card fade-in delay-1">
-          <img
-            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80"
-            alt="Gewerbebauten" />
-          <h3>Gewerbebauten</h3>
-          <p>Professioneller Bau von Geschäftsgebäuden, Büros und Einkaufszentren.</p>
-        </article>
-
-        <article class="service-card fade-in delay-2">
-          <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
-            alt="Infrastruktur Dienstleistungen" />
-          <h3>Infrastruktur</h3>
-          <p>Umfassende Planung und Ausführung von Straßen-, Kanal- und Versorgungsprojekten.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="kontakt" class="container section contact-section">
-      <h2>Kontakt</h2>
-      <p><strong>Adresse:</strong> Wien, Österreich</p>
-      <p><strong>Telefon:</strong> (Derzeit nicht verfügbar)</p>
-      <p><strong>Email:</strong> info@scelik.com</p>
-      <a href="mailto:info@scelik.com" class="btn-secondary">Email senden</a>
-    </section>
-  </main>
+  <section id="kontakt" class="container text-center" data-aos="fade-up">
+    <h2>Kontakt</h2>
+    <p class="fs-5 mt-4"><strong>Adresse:</strong> Arbeitergasse 8 A1, Wien, Österreich</p>
+    <p class="fs-5"><strong>Telefon:</strong> +43 660 6034445</p>
+    <!--p class="fs-5"><strong>Email:</strong> info@scelik-reinigung.at</-p-->
+<p class="fs-5"><strong>Email:</strong> Bald verfügbar</p>  </section>
 
   <footer>
-    <div class="container footer-container">
-      &copy; 2025 Scelik Bauunternehmen. Alle Rechte vorbehalten.
-    </div>
+    &copy; 2025 SCelik Reinigungsservice. Alle Rechte vorbehalten.
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>
